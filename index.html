@@ -33,22 +33,44 @@
 
         /* --- PERSONALIZACIÓN DEL NAVBAR BOOTSTRAP --- */
         .navbar-custom {
-            background-color: #ffffff !important; /* Fondo blanco limpio */
+            background-color: #4a3b68 !important; /* Fondo violeta oscuro */
             padding: 10px 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave inferior */
         }
 
-        /* Color de los enlaces en reposo (Violeta oscuro) */
+        /* Ajuste del enlace base para que se adapte bien en móviles */
         .navbar-custom .nav-link {
-            color: #4a3b68 !important;
+            color: #f7f9fa !important;
             font-weight: 500;
+            font-size: 20px;
+            padding: 10px 15px !important; /* Margen interno cómodo para móviles */
             transition: color 0.3s ease;
+        }
+
+        /* MEDIAS QUERIES: Esto aplica los márgenes grandes SÓLO en pantallas grandes (PC). 
+           En pantallas pequeñas (móviles) se ignorará este margen de 25px para evitar que se descuadre.
+        */
+        @media (min-width: 992px) {
+            .navbar-custom .nav-link {
+                margin-left: 25px;   /* Separación elegante entre palabras en PC */
+                margin-right: 25px;
+            }
         }
 
         /* Color al pasar el ratón o estar activo (Magenta corporativo) */
         .navbar-custom .nav-link:hover,
         .navbar-custom .nav-link:focus {
             color: #b52a7c !important;
+        }
+
+        /* --- BOTÓN HAMBURGUESA EN MAGENTA (MÓVIL) --- */
+        .navbar-custom .navbar-toggler {
+            border-color: #b53987 !important; 
+        }
+
+        /* Cambia las 3 rayas interiores inyectando el color magenta en el SVG */
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b53987' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
         }
 
         /* Estilos para el menú desplegable de Servicios */
@@ -69,7 +91,7 @@
         }
 
         .logo-empresa {
-            max-width: 250px;
+            max-width: 150px;
             height: auto;
             border-radius: 4px;
         }
@@ -217,7 +239,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom border-bottom">
         <div class="container-fluid">
             <a class="navbar-brand d-flex" href="./index.html">
-                <img src="logonuevo.png" class="img-fluid me-2" alt="Logo de Aislamientos Olivilla Tres" style="max-height: 45px;">
+                <img src="logonuevo2.png" class="logo-empresa" alt="Logo de Aislamientos Olivilla Tres">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
