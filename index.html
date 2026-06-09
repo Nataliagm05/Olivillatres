@@ -27,13 +27,56 @@
         }
 
         /* --- ESTILOS DEL NAVBAR --- */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff; /* Fondo blanco para que resalten los colores */
-            padding: 1
-        }
+        /* --- ESTILOS DEL NAVBAR --- */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff; /* Fondo blanco para que resalte tu logo */
+        padding: 12px 40px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra suave inferior */
+        position: sticky;
+        top: 0;
+        z-index: 1000; /* Para que siempre quede visible por encima al bajar */
+    }
+
+    .navbar-logo img {
+        height: 45px; /* Ajusta la altura de tu logo a tu gusto */
+        display: block;
+    }
+
+    .navbar-links {
+        list-style: none;
+    display: flex;
+        align-items: center;
+        gap: 25px; /* Espacio entre los enlaces */
+    }
+
+    .navbar-links a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        color: #4a3b68; /* El tono violeta oscuro de tu marca */
+        transition: color 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+        color: #b52a7c; /* Cambia a magenta al pasar el ratón */
+    }
+
+    /* Estilo especial para el botón de Contacto */
+    .navbar-links .btn-contacto {
+        background-color: #b52a7c; /* Magenta corporativo */
+        color: #ffffff;
+        padding: 8px 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar-links .btn-contacto:hover {
+        background-color: #4a3b68; /* Se vuelve violeta al pasar el ratón */
+        color: #ffffff;
+    }
 
         .logo-empresa {
             max-width: 250px;
