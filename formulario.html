@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solicitud de Presupuesto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Presupuesto</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-<style>
-* {
+    <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        html, body {
+        html,
+        body {
             height: 100%;
         }
 
@@ -60,64 +62,65 @@
         }
 
         /* ========== NAVBAR PRINCIPAL ========== */
-/* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
-.navbar-custom {
-    background-color: #4a3b68 !important;
-    border-bottom: 3px solid #b53987;
-    padding: 0 20px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
-}
+        /* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
+        .navbar-custom {
+            background-color: #4a3b68 !important;
+            border-bottom: 3px solid #b53987;
+            padding: 0 20px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+        }
 
-.navbar-custom .navbar-brand {
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+        .navbar-custom .navbar-brand {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-/* Logo pequeño en móvil, más grande en escritorio */
-.logo-empresa {
-    height: 44px;
-    width: auto;
-    transition: height 0.2s;
-}
+        /* Logo pequeño en móvil, más grande en escritorio */
+        .logo-empresa {
+            height: 44px;
+            width: auto;
+            transition: height 0.2s;
+        }
 
-.nav-link.active {
+        .nav-link.active {
             color: #ffffff !important;
             border-bottom-color: #b53987;
         }
-.navbar-custom .nav-link.active {
+
+        .navbar-custom .nav-link.active {
             color: #b53987 !important;
         }
 
 
-@media (min-width: 992px) {
-    .logo-empresa {
-        height: 64px;
-    }
-}
+        @media (min-width: 992px) {
+            .logo-empresa {
+                height: 64px;
+            }
+        }
 
-.logo-subtitulo {
-    font-size: 12px;
-    color: #b53987;
-    font-weight: 500;
-    border-left: 1px solid #ddd;
-    padding-left: 12px;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-}
+        .logo-subtitulo {
+            font-size: 12px;
+            color: #b53987;
+            font-weight: 500;
+            border-left: 1px solid #ddd;
+            padding-left: 12px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
 
-.navbar-custom .nav-link {
-    color: #dcd6e8 !important;
-    font-weight: 400;
-    font-size: 14px;
-    /* En móvil: padding normal sin el truco del borde inferior */
-    padding: 12px 16px !important;
-    transition: color 0.2s;
-    white-space: nowrap;
-}
+        .navbar-custom .nav-link {
+            color: #ffffff !important;
+            font-weight: 400;
+            font-size: 14px;
+            /* En móvil: padding normal sin el truco del borde inferior */
+            padding: 12px 16px !important;
+            transition: color 0.2s;
+            white-space: nowrap;
+        }
 
-/* ========== DROPDOWN MENU ========== */
+        /* ========== DROPDOWN MENU ========== */
         .navbar-custom .dropdown-menu {
             background-color: #ffffff;
             border: none;
@@ -130,8 +133,15 @@
         }
 
         @keyframes dropFade {
-            from { opacity: 0; transform: translateY(-6px); }
-            to   { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .navbar-custom .dropdown-item {
@@ -175,100 +185,102 @@
             letter-spacing: 0.04em;
         }
 
-/* El subrayado inferior solo en escritorio, donde hay espacio */
-@media (min-width: 992px) {
-    .navbar-custom .nav-link {
-        padding: 24px 16px !important;
-        border-bottom: 3px solid transparent;
-        margin-bottom: -3px;
-        transition: color 0.2s, border-color 0.2s;
-    }
-}
+        /* El subrayado inferior solo en escritorio, donde hay espacio */
+        @media (min-width: 992px) {
+            .navbar-custom .nav-link {
+                padding: 24px 16px !important;
+                border-bottom: 3px solid transparent;
+                margin-bottom: -3px;
+                transition: color 0.2s, border-color 0.2s;
+            }
+        }
 
-.navbar-custom .nav-link:hover,
-.navbar-custom .nav-link:focus {
-    color: #b52a7c !important;
-}
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link:focus {
+            color: #b52a7c !important;
+        }
 
-.btn-nav-contacto {
-    background-color: #b53987 !important;
-    color: #ffffff !important;
-    border-radius: 6px !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    border-bottom: none !important;
-    transition: background-color 0.2s !important;
-    /* En móvil ocupa todo el ancho */
-    padding: 10px 18px !important;
-    margin-top: 8px;
-    display: inline-block;
-}
+        .btn-nav-contacto {
+            background-color: #b53987 !important;
+            color: #ffffff !important;
+            border-radius: 6px !important;
+            font-size: 13px !important;
+            font-weight: 500 !important;
+            border-bottom: none !important;
+            transition: background-color 0.2s !important;
+            /* En móvil ocupa todo el ancho */
+            padding: 10px 18px !important;
+            margin-top: 8px;
+            display: inline-block;
+        }
 
-@media (min-width: 992px) {
-    .btn-nav-contacto {
-        margin-top: 0;
-        margin-left: 8px;
-        padding: 8px 18px !important;
-    }
-}
+        @media (min-width: 992px) {
+            .btn-nav-contacto {
+                margin-top: 0;
+                margin-left: 8px;
+                padding: 8px 18px !important;
+            }
+        }
 
-.btn-nav-contacto:hover {
-    background-color: #4a3b68 !important;
-    color: #ffffff !important;
-}
+        .btn-nav-contacto:hover {
+            background-color: #4a3b68 !important;
+            color: #ffffff !important;
+        }
 
-.navbar-custom .dropdown-menu {
-    border-radius: 8px;
-    border: 1px solid rgba(74, 59, 104, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    margin-top: 3px;
-}
+        .navbar-custom .dropdown-menu {
+            border-radius: 8px;
+            border: 1px solid rgba(74, 59, 104, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-top: 3px;
+        }
 
-.navbar-custom .dropdown-item {
-    color: #4a3b68;
-    font-size: 14px;
-    font-weight: 400;
-}
+        .navbar-custom .dropdown-item {
+            color: #4a3b68;
+            font-size: 14px;
+            font-weight: 400;
+        }
 
-.navbar-custom .dropdown-item:hover {
-    background-color: #f7f9fa;
-    color: #b52a7c;
-}
+        .navbar-custom .dropdown-item:hover {
+            background-color: #f7f9fa;
+            color: #b52a7c;
+        }
 
-.navbar-custom .navbar-toggler {
-    border-color: #b53987 !important;
-}
+        .navbar-custom .navbar-toggler {
+            border-color: #b53987 !important;
+        }
 
-.navbar-custom .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b53987' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-}
-.contenedor{
-    max-width:800px;
-    margin:60px auto;
-}
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b53987' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        }
 
-.card-formulario{
-    background:white;
-    border-radius:12px;
-    padding:40px;
-    box-shadow:0 5px 25px rgba(0,0,0,.08);
-}
+        .contenedor {
+            max-width: 800px;
+            margin: 60px auto;
+        }
 
-h1{
-    color:#4a3b68;
-    margin-bottom:25px;
-}
+        .card-formulario {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, .08);
+        }
 
-.btn-enviar{
-    background:#4a3b68;
-    color:white;
-    border:none;
-}
+        h1 {
+            color: #4a3b68;
+            margin-bottom: 25px;
+        }
 
-.btn-enviar:hover{
-    background:#b53987;
-    color:white;
-}
+        .btn-enviar {
+            background: #4a3b68;
+            color: white;
+            border: none;
+        }
+
+        .btn-enviar:hover {
+            background: #b53987;
+            color: white;
+        }
+
         /* ========== FOOTER ========== */
         .Contacto {
             background-color: #4a3b68;
@@ -277,7 +289,7 @@ h1{
             text-align: center;
             font-size: 0.95rem;
             margin-top: 40px;
-            box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
         }
 
         .Contacto p {
@@ -301,10 +313,11 @@ h1{
             text-align: center;
             color: #dcd6e8;
         }
-</style>
+    </style>
 </head>
+
 <body>
-<!-- ===== TOPBAR ===== -->
+    <!-- ===== TOPBAR ===== -->
     <div class="topbar">
         <span><i class="fa-solid fa-location-dot"></i> Calle Rio Valdecelada, 7 — Toledo</span>
         <div class="topbar-divider"></div>
@@ -314,32 +327,33 @@ h1{
     </div>
 
     <!-- ===== NAVBAR PRINCIPAL ===== -->
-<nav class="navbar navbar-expand-lg navbar-custom">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">
-            <img src="logonuevo2.png" class="logo-empresa" alt="Logo de Aislamientos Olivilla Tres">
-            <span class="logo-subtitulo">Almacén</span>
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="logonuevo2.png" class="logo-empresa" alt="Logo de Aislamientos Olivilla Tres">
+                <span class="logo-subtitulo">Almacén</span>
+            </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-stretch">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html">
-                        <i class="fa-solid fa-house me-1"></i>Inicio
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-stretch">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">
+                            <i class="fa-solid fa-house me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             <i class="fa-solid fa-trowel-bricks"></i> Ferretería
                         </a>
                         <ul class="dropdown-menu">
-                          <li>
+                            <li>
                                 <a class="dropdown-item" href="./brochas.html">
                                     <i class="fa-solid fa-paint-brush me-1"></i>
                                     Brochas
@@ -351,7 +365,9 @@ h1{
                                     Discos
                                 </a>
                             </li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li>
                                 <a class="dropdown-item" href="./todos.html">
                                     <i class="fa-solid fa-list"></i>
@@ -360,93 +376,87 @@ h1{
                                 </a>
                             </li>
                         </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.html#nosotros">
-                        <i class="fa-solid fa-building me-1"></i>Nosotros
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-nav-contacto" href="./formulario.html">
-                        <i class="fa-solid fa-phone me-1"></i>Solicitar Presupuesto
-                    </a>
-                </li>
-            </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#nosotros">
+                            <i class="fa-solid fa-building me-1"></i>Nosotros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-nav-contacto" href="./formulario.html">
+                            <i class="fa-solid fa-phone me-1"></i>Solicitar Presupuesto
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-<div class="container contenedor">
+    </nav>
+    <div class="container contenedor">
 
-    <div class="card-formulario">
+        <div class="card-formulario">
 
-        <h1>
-            <i class="fa-solid fa-file-invoice me-2"></i>
-            Solicitud de presupuesto
-        </h1>
+            <h1>
+                <i class="fa-solid fa-file-invoice me-2"></i>
+                Solicitud de presupuesto
+            </h1>
 
-        <form action="https://formsubmit.co/almacen@olivillatres.com" method="POST">
+            <form action="https://formsubmit.co/almacen@olivillatres.com" method="POST">
 
-        <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_captcha" value="false">
 
-        <input type="hidden" name="_subject"
-            value="Nueva solicitud de presupuesto - Web Olivilla Tres">
+                <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto - Web Olivilla Tres">
 
-        <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_template" value="table">
 
-        <input type="hidden" name="_next"
-            value=" https://nataliagm05.github.io/Olivillatresalmacen/gracias.html">
-        <input type="hidden" name="_autoresponse"
-            value="Hemos recibido su solicitud de presupuesto. Nos pondremos en contacto con usted lo antes posible.">
-            <div class="mb-3">
-                <label class="form-label">Nombre completo</label>
-                <input type="text" name="nombre" class="form-control" required>
-            </div>
+                <input type="hidden" name="_next"
+                    value=" https://nataliagm05.github.io/Olivillatresalmacen/gracias.html">
+                <input type="hidden" name="_autoresponse"
+                    value="Hemos recibido su solicitud de presupuesto. Nos pondremos en contacto con usted lo antes posible.">
+                <div class="mb-3">
+                    <label class="form-label">Nombre completo</label>
+                    <input type="text" name="nombre" class="form-control" required>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Empresa (opcional)</label>
-                <input type="text" name="empresa" class="form-control">
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Empresa (opcional)</label>
+                    <input type="text" name="empresa" class="form-control">
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Correo electrónico</label>
-                <input type="email" name="email" class="form-control" required>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Correo electrónico</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Teléfono</label>
-                <input type="tel" name="telefono" class="form-control">
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Teléfono</label>
+                    <input type="tel" name="telefono" class="form-control">
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Tipo de trabajo</label>
-                <select name="servicio" class="form-select">
-                    <option>Aislamiento térmico</option>
-                    <option>Aislamiento acústico</option>
-                    <option>Impermeabilización</option>
-                    <option>Otro</option>
-                </select>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Tipo de trabajo</label>
+                    <select name="servicio" class="form-select">
+                        <option>Aislamiento térmico</option>
+                        <option>Aislamiento acústico</option>
+                        <option>Impermeabilización</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
 
-            <div class="mb-3">
-                <label class="form-label">Descripción del proyecto</label>
-                <textarea
-                    name="mensaje"
-                    rows="6"
-                    class="form-control"
-                    required
-                ></textarea>
-            </div>
+                <div class="mb-3">
+                    <label class="form-label">Descripción del proyecto</label>
+                    <textarea name="mensaje" rows="6" class="form-control" required></textarea>
+                </div>
 
-            <button type="submit" class="btn btn-enviar">
-                <i class="fa-solid fa-paper-plane me-2"></i>
-                Enviar solicitud
-            </button>
+                <button type="submit" class="btn btn-enviar">
+                    <i class="fa-solid fa-paper-plane me-2"></i>
+                    Enviar solicitud
+                </button>
 
-        </form>
+            </form>
+
+        </div>
 
     </div>
-
-</div>
     <!-- ===== FOOTER ===== -->
     <footer class="Contacto">
         <p><strong>Calle Rio Valdecelada, 7</strong></p>
@@ -463,9 +473,9 @@ h1{
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script type="text/javascript">
-        (function(d, t) {
+        (function (d, t) {
             var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-            v.onload = function() {
+            v.onload = function () {
                 window.voiceflow.chat.load({
                     verify: { projectID: '6a26a29ec4acdd8a282fd8bf' },
                     url: 'https://general-runtime.voiceflow.com',
@@ -478,4 +488,5 @@ h1{
         })(document, 'script');
     </script>
 </body>
+
 </html>
