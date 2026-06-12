@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sika - Almacen Olivilla tres S.L.U</title>
+    <title>Sika — Almacén Olivilla Tres S.L.U</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -17,10 +17,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        html,
-        body {
-            height: 100%;
-        }
+        html, body { height: 100%; }
 
         body {
             background-color: #f7f9fa;
@@ -33,15 +30,14 @@
         /* ========== TOPBAR ========== */
         .topbar {
             background-color: #35284f;
-            padding: 6px 30px;
+            padding: 7px 30px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: 24px;
+            gap: 20px;
         }
 
-        .topbar a,
-        .topbar span {
+        .topbar a, .topbar span {
             color: #c9b8e8;
             font-size: 0.78rem;
             text-decoration: none;
@@ -51,9 +47,7 @@
             transition: color 0.2s;
         }
 
-        .topbar a:hover {
-            color: #f386cc;
-        }
+        .topbar a:hover { color: #f386cc; }
 
         .topbar .topbar-divider {
             width: 1px;
@@ -61,13 +55,12 @@
             background-color: #5a4878;
         }
 
-        /* ========== NAVBAR PRINCIPAL ========== */
-        /* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
+        /* ========== NAVBAR ========== */
         .navbar-custom {
             background-color: #4a3b68 !important;
             border-bottom: 3px solid #b53987;
             padding: 0 20px;
-            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
         }
 
         .navbar-custom .navbar-brand {
@@ -77,118 +70,30 @@
             gap: 12px;
         }
 
-        /* Logo pequeño en móvil, más grande en escritorio */
-        .logo-empresa {
-            height: 44px;
-            width: auto;
-            transition: height 0.2s;
-        }
-
-        .nav-link.active {
-            color: #ffffff !important;
-            border-bottom-color: #b53987;
-        }
-
-        .navbar-custom .nav-link.active {
-            color: #b53987 !important;
-        }
-
-
-        @media (min-width: 992px) {
-            .logo-empresa {
-                height: 64px;
-            }
-        }
+        .logo-empresa { height: 70px; width: auto; }
 
         .logo-subtitulo {
-            font-size: 12px;
-            color: #b53987;
+            font-size: 14px;
+            color: #e8b0d0;
             font-weight: 500;
-            border-left: 1px solid #ddd;
+            border-left: 1px solid rgba(255,255,255,0.2);
             padding-left: 12px;
             letter-spacing: 0.3px;
             white-space: nowrap;
         }
 
         .navbar-custom .nav-link {
-            color: #ffffff !important;
+            color: rgba(255,255,255,0.85) !important;
             font-weight: 400;
             font-size: 14px;
-            /* En móvil: padding normal sin el truco del borde inferior */
-            padding: 12px 16px !important;
+            padding: 12px 14px !important;
             transition: color 0.2s;
             white-space: nowrap;
         }
 
-        /* ========== DROPDOWN MENU ========== */
-        .navbar-custom .dropdown-menu {
-            background-color: #ffffff;
-            border: none;
-            border-top: 3px solid #b53987;
-            border-radius: 0 0 10px 10px;
-            box-shadow: 0 12px 32px rgba(74, 59, 104, 0.18);
-            padding: 10px 0;
-            min-width: 240px;
-            animation: dropFade 0.18s ease;
-        }
-
-        @keyframes dropFade {
-            from {
-                opacity: 0;
-                transform: translateY(-6px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .navbar-custom .dropdown-item {
-            color: #4a3b68;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: background 0.15s, color 0.15s, padding-left 0.15s;
-        }
-
-        .navbar-custom .dropdown-item i {
-            width: 18px;
-            text-align: center;
-            color: #b53987;
-            font-size: 0.88rem;
-        }
-
-        .navbar-custom .dropdown-item:hover {
-            background-color: #f7f0f5;
-            color: #b53987;
-            padding-left: 26px;
-        }
-
-        .navbar-custom .dropdown-divider {
-            border-color: #ede5f5;
-            margin: 6px 16px;
-        }
-
-        /* Etiqueta badge en dropdown */
-        .dropdown-item .badge-new {
-            background-color: #b53987;
-            color: #fff;
-            font-size: 0.65rem;
-            font-weight: 600;
-            padding: 2px 7px;
-            border-radius: 20px;
-            margin-left: auto;
-            letter-spacing: 0.04em;
-        }
-
-        /* El subrayado inferior solo en escritorio, donde hay espacio */
         @media (min-width: 992px) {
             .navbar-custom .nav-link {
-                padding: 24px 16px !important;
+                padding: 22px 14px !important;
                 border-bottom: 3px solid transparent;
                 margin-bottom: -3px;
                 transition: color 0.2s, border-color 0.2s;
@@ -196,9 +101,47 @@
         }
 
         .navbar-custom .nav-link:hover,
-        .navbar-custom .nav-link:focus {
-            color: #b52a7c !important;
+        .navbar-custom .nav-link:focus { color: #f386cc !important; border-bottom-color: #b53987; }
+
+        .navbar-custom .nav-link.active { color: #f386cc !important; border-bottom-color: #b53987; }
+
+        .navbar-custom .dropdown-menu {
+            background-color: #ffffff;
+            border: none;
+            border-top: 3px solid #b53987;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 12px 32px rgba(74,59,104,0.18);
+            padding: 8px 0;
+            min-width: 220px;
+            animation: dropFade 0.15s ease;
         }
+
+        @keyframes dropFade {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .navbar-custom .dropdown-item {
+            color: #4a3b68;
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 9px 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.15s, color 0.15s, padding-left 0.15s;
+        }
+
+        .navbar-custom .dropdown-item:hover {
+            background-color: #f7f0f5;
+            color: #b53987;
+            padding-left: 24px;
+        }
+
+        .navbar-custom .dropdown-divider { border-color: #ede5f5; margin: 5px 14px; }
+
+        .dropdown-item.active { background-color: #4a3b68; color: #f7f9fa; }
+        .dropdown-item.active:hover { background-color: #b53987 !important; color: #f7f9fa !important; }
 
         .btn-nav-contacto {
             background-color: #b53987 !important;
@@ -207,258 +150,360 @@
             font-size: 13px !important;
             font-weight: 500 !important;
             border-bottom: none !important;
-            transition: background-color 0.2s !important;
-            /* En móvil ocupa todo el ancho */
-            padding: 10px 18px !important;
+            padding: 10px 16px !important;
             margin-top: 8px;
             display: inline-block;
+            transition: background-color 0.2s !important;
         }
 
         @media (min-width: 992px) {
-            .btn-nav-contacto {
-                margin-top: 0;
-                margin-left: 8px;
-                padding: 8px 18px !important;
-            }
+            .btn-nav-contacto { margin-top: 0; margin-left: 6px; padding: 8px 16px !important; }
         }
 
-        .btn-nav-contacto:hover {
-            background-color: #4a3b68 !important;
-            color: #ffffff !important;
-        }
+        .btn-nav-contacto:hover { background-color: #922f6d !important; }
 
-        .navbar-custom .dropdown-menu {
-            border-radius: 8px;
-            border: 1px solid rgba(74, 59, 104, 0.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            margin-top: 3px;
-        }
-
-        .navbar-custom .dropdown-item {
-            color: #4a3b68;
-            font-size: 14px;
-            font-weight: 400;
-        }
-
-        .navbar-custom .dropdown-item:hover {
-            background-color: #f7f9fa;
-            color: #b52a7c;
-        }
-
-        .navbar-custom .navbar-toggler {
-            border-color: #b53987 !important;
-        }
-
-        .navbar-custom .navbar-toggler:focus,
-        .navbar-custom .navbar-toggler:active,
-        .navbar-custom .navbar-toggler:focus-visible {
-            outline: none !important;
-            box-shadow: 0 0 0 0.2rem rgba(181, 57, 135, 0.4) !important;
-            border-color: #b53987 !important;
-        }
-
+        .navbar-custom .navbar-toggler { border-color: #b53987 !important; }
+        .navbar-custom .navbar-toggler:focus { box-shadow: 0 0 0 0.2rem rgba(181,57,135,0.4) !important; }
         .navbar-custom .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23b53987' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
         }
 
-        .dropdown-item.active {
-            background-color: #4a3b68;
-            color: #f7f9fa;
-            font-size: 14px;
-            font-weight: 400;
+        /* ========== CABECERA PROVEEDOR ========== */
+        .proveedor-hero {
+            background: linear-gradient(135deg, #35284f 0%, #4a3b68 60%, #5e3d7a 100%);
+            padding: 4px 0 24px;
+            border-bottom: 4px solid #b53987;
+            position: relative;
+            overflow: hidden;
         }
 
-        .dropdown-item.active:hover {
-            background-color: #b53987 !important;
-            color: #f7f9fa !important;
-            font-size: 14px;
-            font-weight: 400;
+        .proveedor-hero::after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: -80px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: rgba(181,57,135,0.08);
         }
 
-        /* ========== RESTO DE ESTILOS (sin cambios) ========== */
-        .container-custom {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-            flex: 1;
+        .proveedor-hero .container { position: relative; z-index: 1; }
+
+        .proveedor-breadcrumb {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 20px;
         }
 
-        .titulo-proveedor {
-            color: #b53987;
-            margin-bottom: 30px;
-            font-size: 2rem;
-            /* Bajado un poco para que quepa mejor en móviles */
-            font-weight: bold;
-            border-left: 6px solid #4a3b68;
-            padding-left: 15px;
-
-            /* --- FLEXBOX MEJORADO --- */
-            display: flex;
-            flex-direction: column;
-            /* En móvil: el logo arriba, el texto abajo */
-            align-items: flex-start;
-            gap: 10px;
-            /* Espacio controlado entre logo y texto */
+        .proveedor-breadcrumb a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: color 0.2s;
         }
 
-        /* Cuando la pantalla sea de tablet o computadora (escritorio) */
-        @media (min-width: 576px) {
-            .titulo-proveedor {
-                flex-direction: row;
-                /* Se ponen en fila horizontal */
-                align-items: center;
-                /* Se centran verticalmente */
-                font-size: 2.3rem;
-                /* Recupera el tamaño grande */
-                gap: 20px;
-            }
+        .proveedor-breadcrumb a:hover { color: #f386cc; }
+        .proveedor-breadcrumb span { margin: 0 6px; }
+
+        .proveedor-logo-wrap {
+            background: rgba(255,255,255,0.97);
+            border-radius: 12px;
+            padding: 14px 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
 
-        .seccion-carrusel {
-            margin-bottom: 50px;
+        .proveedor-logo-wrap img { height: 48px; width: auto; }
+
+        .proveedor-hero h1 {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
         }
+
+        .proveedor-hero p { color: rgba(255,255,255,0.65); font-size: 0.95rem; margin: 0; }
+
+        /* ========== CARRUSEL ========== */
+        .seccion-carrusel { margin: 40px 0; }
 
         .carousel-inner {
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(74, 59, 104, 0.15);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(74,59,104,0.15);
             background-color: #4a3b68;
         }
 
         .carousel-item img {
             width: 100%;
-            height: auto;
-            max-height: 500px;
+            height: 400px;
             object-fit: contain;
             background-color: #4a3b68;
+            padding: 20px;
         }
 
         .carousel-caption {
-            background: rgba(74, 59, 104, 0.8);
+            background: rgba(30,20,50,0.75);
             border-radius: 8px;
-            padding: 15px;
+            padding: 12px 18px;
+            backdrop-filter: blur(4px);
         }
 
-        .seccion-productos h2 {
-            color: #4a3b68;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
+        .carousel-caption h5 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+        .carousel-caption p { font-size: 0.83rem; margin: 0; color: rgba(255,255,255,0.8); }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 44px;
+            height: 44px;
+            background: rgba(181,57,135,0.75);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 12px;
         }
 
+        .carousel-control-prev { left: 0; }
+        .carousel-control-next { right: 0; }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: #b53987;
+            opacity: 0.5;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .carousel-indicators .active { opacity: 1; }
+
+        /* ========== CATÁLOGO ========== */
+        .seccion-catalogo { padding: 0 0 60px; }
+
+        .catalogo-heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 32px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid #ede5f5;
+        }
+
+        .catalogo-heading h2 { font-size: 1.5rem; font-weight: 700; color: #4a3b68; margin: 0; }
+
+        .catalogo-heading .badge-count {
+            background: #f0ebf7;
+            color: #b53987;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* ========== TARJETAS ========== */
         .card-producto {
-            border: 2px solid rgba(74, 59, 104, 0.1);
-            border-radius: 10px;
-            transition: all 0.3s ease;
+            border: 1.5px solid #ede5f5;
+            border-radius: 14px;
             background: #ffffff;
+            display: flex;
+            flex-direction: column;
             height: 100%;
+            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+            overflow: hidden;
         }
 
         .card-producto:hover {
             transform: translateY(-5px);
             border-color: #b53987;
-            box-shadow: 0 8px 16px rgba(181, 57, 135, 0.15);
+            box-shadow: 0 12px 30px rgba(181,57,135,0.12);
         }
 
-        .card-producto img {
-            height: 200px;
-            object-fit: contain;
-            padding: 15px;
-            background: #f8f9fa;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-        }
-
-        .card-producto .card-title {
-            color: #4a3b68;
-            font-weight: bold;
-        }
-
-        .btn-producto {
-            background-color: #4a3b68;
-            color: white;
-            border: none;
-            transition: background-color 0.2s;
-        }
-
-        .btn-producto:hover {
-            background-color: #b52a7c;
-            color: white;
-        }
-
-        .aviso-mas-articulos {
-            margin-top: 40px;
-            background: linear-gradient(135deg, #4a3b68, #6b4f8f);
-            border-radius: 12px;
-            padding: 30px 35px;
-            color: #ffffff;
+        .card-producto .img-wrap {
+            background: #f8f6fc;
+            border-bottom: 1px solid #ede5f5;
+            height: 190px;
             display: flex;
             align-items: center;
-            gap: 20px;
-            box-shadow: 0 4px 15px rgba(74, 59, 104, 0.25);
-        }
-
-        .aviso-mas-articulos .aviso-icono {
-            font-size: 2.8rem;
-            color: #f386cc;
+            justify-content: center;
+            padding: 16px;
             flex-shrink: 0;
         }
 
-        .aviso-mas-articulos h4 {
-            margin: 0 0 6px 0;
-            font-size: 1.3rem;
-            font-weight: bold;
+        .card-producto .img-wrap img {
+            max-width: 100%;
+            max-height: 158px;
+            object-fit: contain;
         }
+
+        .card-producto .card-body {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .card-producto .card-title {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #4a3b68;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .card-desc { font-size: 0.82rem; color: #7a6b95; line-height: 1.55; margin-bottom: 0; }
+        .card-desc-short { display: block; }
+        .card-desc-extra { display: none; margin-top: 4px; }
+        .card-desc-extra.visible { display: block; }
+
+        .btn-ver-mas {
+            background: none;
+            border: none;
+            color: #b53987;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 4px 0 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s;
+            margin-top: 4px;
+        }
+
+        .btn-ver-mas:hover { color: #922f6d; }
+        .btn-ver-mas i { font-size: 0.7rem; transition: transform 0.2s; }
+        .btn-ver-mas.abierto i { transform: rotate(180deg); }
+
+        .specs-wrap {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .spec-badge {
+            background: #f0ebf7;
+            color: #4a3b68;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 20px;
+            border: 1px solid #ddd5ef;
+        }
+
+        .btn-ficha {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+            padding-top: 12px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #b53987;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .btn-ficha:hover { color: #922f6d; }
+        .btn-ficha i { font-size: 0.75rem; }
+
+        /* ========== AVISO ========== */
+        .aviso-mas-articulos {
+            margin-top: 48px;
+            background: linear-gradient(135deg, #4a3b68, #6b4f8f);
+            border-radius: 16px;
+            padding: 32px 36px;
+            color: #ffffff;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            box-shadow: 0 8px 30px rgba(74,59,104,0.25);
+        }
+
+        .aviso-mas-articulos .aviso-icono {
+            font-size: 2.5rem;
+            color: #f386cc;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .aviso-mas-articulos h4 { margin: 0 0 8px; font-size: 1.15rem; font-weight: 700; }
 
         .aviso-mas-articulos p {
-            margin: 0;
-            font-size: 0.97rem;
-            color: #dcd6e8;
+            margin: 0 0 6px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.65;
         }
 
-        .aviso-mas-articulos a {
-            color: #f386cc;
-            font-weight: bold;
-            text-decoration: none;
-        }
+        .aviso-mas-articulos a { color: #f386cc; font-weight: 600; text-decoration: none; }
+        .aviso-mas-articulos a:hover { text-decoration: underline; }
 
-        .aviso-mas-articulos a:hover {
-            text-decoration: underline;
-        }
-
-        .Contacto {
+        /* ========== FOOTER ========== */
+        .footer-main {
             background-color: #4a3b68;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.95rem;
-            margin-top: 40px;
-            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+            color: rgba(255,255,255,0.8);
+            padding: 50px 0 0;
+            margin-top: auto;
         }
 
-        .Contacto p {
-            margin: 4px 0;
+        .footer-brand p { font-size: 0.88rem; color: rgba(255,255,255,0.6); margin-top: 12px; line-height: 1.65; }
+
+        .footer-heading {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #e8b0d0;
+            margin-bottom: 16px;
         }
 
-        .Contacto a {
-            color: #f386cc;
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 8px; }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.65);
             text-decoration: none;
-            font-weight: bold;
+            font-size: 0.88rem;
+            transition: color 0.2s;
         }
 
-        .Contacto a:hover {
-            text-decoration: underline;
+        .footer-links a:hover { color: #f386cc; }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.65);
         }
 
-        .Contacto .grupo-2 {
-            background-color: #35284f;
-            padding: 15px 10px;
-            margin: 20px -20px -20px -20px;
+        .footer-contact-item i { color: #b53987; font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
+
+        .footer-contact-item a {
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-contact-item a:hover { color: #f386cc; }
+
+        .footer-bottom { background-color: #35284f; padding: 16px 0; margin-top: 40px; }
+
+        .footer-bottom p {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.45);
+            margin: 0;
             text-align: center;
-            color: #dcd6e8;
         }
     </style>
 </head>
 
 <body>
+
     <!-- ===== TOPBAR ===== -->
     <div class="topbar">
         <span><i class="fa-solid fa-location-dot"></i> Calle Rio Valdecelada, 7 — Toledo</span>
@@ -467,17 +512,18 @@
         <div class="topbar-divider"></div>
         <a href="mailto:almacen@olivillatres.com"><i class="fa-solid fa-envelope"></i> almacen@olivillatres.com</a>
     </div>
-    <!-- ===== NAVBAR PRINCIPAL ===== -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-3 px-lg-4">
             <a class="navbar-brand" href="./index.html">
-                <img src="logonuevo2.png" class="logo-empresa" alt="Logo de Aislamientos Olivilla Tres">
+                <img src="logonuevo2.png" class="logo-empresa" alt="Logo Almacén Olivilla Tres">
                 <span class="logo-subtitulo">Almacén</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -489,71 +535,21 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-trowel-bricks"></i> Proveedores
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-trowel-bricks me-1"></i>Proveedores
                         </a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item active" href="./sika.html">
-                                    Sika
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./bostik.html">
-                                    Bostik
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./grupopuma.html">
-                                    Grupopuma
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./ursa.html">
-                                    Ursa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./regarsa.html">
-                                    Regarsa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./soprema.html">
-                                    Soprema
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./maydisa.html">
-                                    Maydisa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./pladur.html">
-                                    Pladur
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./suimco.html">
-                                    Suimco
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./tripomat.html">
-                                    Tripomant
-                                </a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./todos.html">
-                                    <i class="fa-solid fa-list"></i>
-                                    Todos los Proveedores
-                                    <span class="badge-new">Ver todo</span>
-                                </a>
-                            </li>
+                            <li><a class="dropdown-item active" href="./sika.html">Sika</a></li>
+                            <li><a class="dropdown-item" href="./bostik.html">Bostik</a></li>
+                            <li><a class="dropdown-item" href="./grupopuma.html">Grupo Puma</a></li>
+                            <li><a class="dropdown-item" href="./ursa.html">Ursa</a></li>
+                            <li><a class="dropdown-item" href="./regarsa.html">Regarsa</a></li>
+                            <li><a class="dropdown-item" href="./soprema.html">Soprema</a></li>
+                            <li><a class="dropdown-item" href="./maydisa.html">Maydisa</a></li>
+                            <li><a class="dropdown-item" href="./pladur.html">Pladur</a></li>
+                            <li><a class="dropdown-item" href="./suimco.html">Suimco</a></li>
+                            <li><a class="dropdown-item" href="./tripomat.html">Tripomant</a></li>
+                            <li><hr class="dropdown-divider"></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -563,12 +559,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./poliymeta.html">
-                            <i class="fa-solid fa-cube me-1"></i>Policarbonatos y metacrilatos
+                            <i class="fa-solid fa-cube me-1"></i>Policarbonatos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./alquiler.html">
-                            <i class="fa-solid fa-building me-1"></i>Alquiler de Maquinaría
+                        <a class="nav-link" href="./maquinaria.html">
+                            <i class="fa-solid fa-truck-monster me-1"></i>Alquiler de Maquinaria
                         </a>
                     </li>
                     <li class="nav-item">
@@ -581,771 +577,870 @@
         </div>
     </nav>
 
-    <!-- ===== CONTENIDO PRINCIPAL ===== -->
-    <div class="container-custom">
+    <!-- ===== CABECERA PROVEEDOR ===== -->
+    <div class="proveedor-hero">
+        <div class="container">
+            <div class="proveedor-breadcrumb">
+                <a href="./index.html">Inicio</a>
+                <span>›</span>
+                <a href="#">Proveedores</a>
+                <span>›</span>
+                Sika
+            </div>
+            <div class="proveedor-logo-wrap">
+                <img src="https://sika.scene7.com/is/content/sika/Sika_ClaimU_pos_rgb" alt="Logo Sika">
+            </div>
+            <h1>Productos Sika</h1>
+            <p>Impermeabilizantes, adhesivos, morteros y soluciones para construcción y rehabilitación</p>
+        </div>
+    </div>
 
-        <h1 class="titulo-proveedor">
-            <img src="https://sika.scene7.com/is/content/sika/Sika_ClaimU_pos_rgb" alt="Logo Sika"
-                style="height: 100px; width: auto; vertical-align: middle; margin-right: 12px;">
-            Productos de Sika
-        </h1>
+    <!-- ===== CONTENIDO ===== -->
+    <main class="container" style="flex: 1;">
 
-        <section class="seccion-carrusel">
-            <div id="carruselProductos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <!-- CARRUSEL -->
+        <div class="seccion-carrusel">
+            <div id="carruselProductos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carruselProductos" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
-
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="sikaflex-11fc.jpg" class="d-block w-100" alt="Producto 1">
+                        <img src="sikaflex-11fc.jpg" class="d-block w-100" alt="Sikaflex 11 FC">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>SikaFlex 11 FC</h5>
                             <p>Adhesivo multiusos y sellador de juntas elástico.</p>
                         </div>
                     </div>
-
                     <div class="carousel-item">
-                        <img src="sikalastic612.webp" class="d-block w-100" alt="Producto 2">
+                        <img src="sikalastic612.webp" class="d-block w-100" alt="SikaLastic 612">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>SikaLastic 612</h5>
-                            <p>Membrana impermeabilizante de poliuretano monocomponente, de aplicación líquida, con
-                                óptima relación coste-prestaciones.</p>
+                            <p>Membrana impermeabilizante de poliuretano monocomponente.</p>
                         </div>
                     </div>
-
                     <div class="carousel-item">
-                        <img src="sikalastic1kes.webp" class="d-block w-100" alt="Producto 3">
+                        <img src="sikalastic1kes.webp" class="d-block w-100" alt="SikaLastic 1K ES">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>SikaLastic 1K ES</h5>
-                            <p>Mortero monocomponente, reforzado con fibras y flexible para impermeabilización y protecc
-                                del hormigón.</p>
+                            <p>Mortero monocomponente reforzado con fibras para impermeabilización.</p>
                         </div>
                     </div>
-
                     <div class="carousel-item">
-                        <img src="sikatop107pluses.webp" class="d-block w-100" alt="Producto 4">
+                        <img src="sikatop107pluses.webp" class="d-block w-100" alt="SikaTop 107 Plus ES">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>SikaTop 107 Plus ES</h5>
                             <p>Mortero cementoso para impermeabilización y protección.</p>
                         </div>
                     </div>
                 </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carruselProductos"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselProductos" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Anterior</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carruselProductos"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselProductos" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
-        </section>
+        </div>
 
-        <section class="seccion-productos">
-            <h2>Catálogo Completo (A-Z)</h2>
+        <!-- CATÁLOGO -->
+        <section class="seccion-catalogo">
+            <div class="catalogo-heading">
+                <h2>Catálogo Completo</h2>
+                <span class="badge-count">A–Z</span>
+            </div>
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
+                <!-- Arena Sikadur -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="arenasikadur.png" class="card-img-top" alt="Arena Sikadur">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="arenasikadur.png" alt="Arena Sikadur"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Arena Sikadur</h5>
-                            <p class="card-text text-muted small">Sikadur® Arena. Arena Sílica para usos especiales.
-                                Arena de cuarzo lavada, seca y con granulometría definida. Se ofrece en tres
-                                granulometrías diferentes: Fina, Mediana y Gruesa. </p>
-                            <p class="card-text text-muted small">Especificaciones para Arenas Sikadur 510:
-                                <li style="margin-left: 20px;">Saco: 26 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Arena de cuarzo lavada, seca y con granulometría definida para usos especiales.</span>
+                                <span class="card-desc-extra">Disponible en tres granulometrías: Fina, Mediana y Gruesa.</span>
                             </p>
+                            <div class="specs-wrap card-desc-extra">
+                                <span class="spec-badge">Saco 26 kg</span>
+                            </div>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Fondo de Junta -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="fondodejuntasika.jpg" class="card-img-top" alt="Fondo de junta sika">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="fondodejuntasika.jpg" alt="Fondo de Junta Sika"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Fondo de Junta Sika</h5>
-                            <p class="card-text text-muted small">Fondo de junta Sika®. Perfiles cilíndricos de espuma
-                                de polietileno de célula cerrada.</p>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Perfiles cilíndricos de espuma de polietileno de célula cerrada.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lanko Especial Plus -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-Lanko-Especial-Plus-3D-04829880:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha"
-                            class="card-img-top" alt="Lanko especial Plus">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-Lanko-Especial-Plus-3D-04829880:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="Lanko Especial Plus"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Lanko Especial Plus</h5>
-                            <p class="card-text text-muted small">LANKO® Especial Plus es un adhesivo cementoso para
-                                cerámica de porosidad media-alta y pequeños formatos para pegado en suelos (interiores y
-                                exteriores) y revestimientos (interiores).</p>
-                            <p class="card-text text-muted small">Especificaciones para Adheivos Cementosos Lanko:
-                                <li style="margin-left: 20px;">Blanco, Palet de 48 Sacos de 25 kg cada Saco o Sacos por separado</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Adhesivo cementoso para cerámica de porosidad media-alta y pequeños formatos.</span>
+                                <span class="card-desc-extra">Para pegado en suelos (interiores y exteriores) y revestimientos interiores.</span>
                             </p>
+                            <div class="specs-wrap card-desc-extra">
+                                <span class="spec-badge">Blanco</span>
+                                <span class="spec-badge">Palet 48 sacos × 25 kg</span>
+                            </div>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lanko Flexible -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-Lanko-Flexible-3D-04829983:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha"
-                            class="card-img-top" alt="Lanko Flexible">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-Lanko-Flexible-3D-04829983:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="Lanko Flexible"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Lanko Flexible</h5>
-                            <p class="card-text text-muted small">LANKO® Flexible es un adhesivo cementoso para
-                                cerámica. Alta adherencia en sobre diferentes soportes y flexible para el pegado de
-                                cerámica en suelos y verticales, tanto para interior como exterior.</p>
-                            <p class="card-text text-muted small">Especificaciones para Adheivos Cementosos Lanko:
-                                <li style="margin-left: 20px;">Blanco, Palet de 48 Sacos de 25 kg cada Saco o Sacos por separado</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Adhesivo cementoso de alta adherencia y flexible para cerámica en suelos y verticales.</span>
+                                <span class="card-desc-extra">Válido sobre diferentes soportes, tanto en interior como exterior.</span>
                             </p>
+                            <div class="specs-wrap card-desc-extra">
+                                <span class="spec-badge">Blanco</span>
+                                <span class="spec-badge">Palet 48 sacos × 25 kg</span>
+                            </div>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika 1 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-esp-sika1-5kg-00194208:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha"
-                            class="card-img-top" alt="Sika-1">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-esp-sika1-5kg-00194208:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="Sika 1"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika 1</h5>
-                            <p class="card-text text-muted small">Sika®-1 es un impermeabilizante líquido para mortero y
-                                hormigón, exento de cloruros. Aditivo impermeabilizante de fraguado normal para mortero
-                                y hormigón.</p>
-                            <p class="card-text text-muted small">Especificaciones para Impermeabilizantes:
-                                <li style="margin-left: 20px;">Amarillo, Garrafa de 5 kg</li>
-                                <li style="margin-left: 20px;">Amarillo, Garrafa de 25 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Impermeabilizante líquido para mortero y hormigón, exento de cloruros.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Amarillo</span>
+                                <span class="spec-badge">Garrafa 5 kg</span>
+                                <span class="spec-badge">Garrafa 25 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika-4 Mortero Rápido -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sika4morterorapido.png" class="card-img-top" alt="Sika-4 Mortero Rápido">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sika4morterorapido.png" alt="Sika-4 Mortero Rápido"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika-4 Mortero Rápido</h5>
-                            <p class="card-text text-muted small">Sika®-4a Mortero Rápido es un mortero monocomponente
-                                de fraguado rápido, a base de cemento y exento de cloruros.</p>
-                            <p class="card-text text-muted small">Especificaciones para Morteros de Fraguado Rápido:
-                                <li style="margin-left: 20px;">Gris, Caja de 2 Bolsas de 10 kg la Bolsa o bolsas por separado</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Mortero monocomponente de fraguado rápido, a base de cemento y exento de cloruros.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Gris</span>
+                                <span class="spec-badge">Caja 2 bolsas × 10 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika Bitumix -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-esp.sika-bitumix-00845591:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha"
-                            class="card-img-top" alt="Sika Bitumix">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-esp.sika-bitumix-00845591:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="Sika Bitumix"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika Bitumix</h5>
-                            <p class="card-text text-muted small">Sika® Bitumix es un aglomerado asfáltico en frío,
-                                formado por una mezcla de agregados minerales y ligante bituminoso modificado.</p>
-                            <p class="card-text text-muted small">Especificaciones:
-                                <li style="margin-left: 20px;">Negro, Botes de 25 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Aglomerado asfáltico en frío, formado por áridos minerales y ligante bituminoso modificado.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Negro</span>
+                                <span class="spec-badge">Bote 25 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika Concrete Primer -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="" class="card-img-top" alt="Sika Concrete Primer">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="" alt="Sika Concrete Primer"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika Concrete Primer</h5>
-                            <p class="card-text text-muted small">Sika® Concrete Primer es una imprimación bicomponente
-                                híbrida de poliurea / poliuretano para soportes cementosos.</p>
-                            <p class="card-text text-muted small">Especificaciones para Imprimaciones:
-                                <li style="margin-left: 20px;">Transparente, Lote de 12 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Imprimación bicomponente híbrida de poliurea / poliuretano para soportes cementosos.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Transparente</span>
+                                <span class="spec-badge">Lote 12 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika Desencofrante EN -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-sika-desencofrante-en-images-2000x2000-01938118:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="Sika Desencofrante EN">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-sika-desencofrante-en-images-2000x2000-01938118:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="Sika Desencofrante EN"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika Desencofrante EN</h5>
-                            <p class="card-text text-muted small">Sika® Desencofrante EN es un aceite de desencofrado
-                                para todo tipo de encofrados, principalmente absorbentes.</p>
-                            <p class="card-text text-muted small">Especificaciones para Productos de Curado y Desencofrantes:
-                                <li style="margin-left: 20px;">Amarillento, Garrafa de 25 l</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Aceite de desencofrado para todo tipo de encofrados, principalmente absorbentes.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Amarillento</span>
+                                <span class="spec-badge">Garrafa 25 l</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika FastFix 130 TP -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://pim2.sika.com/medias/sys_master/root/he1/hd9/8971299061790/esp-sika-fastfix-130-tp-25kg-1x1.jpg" class="card-img-top" alt="Sika Fast Fix 130 TP">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://pim2.sika.com/medias/sys_master/root/he1/hd9/8971299061790/esp-sika-fastfix-130-tp-25kg-1x1.jpg" alt="Sika FastFix 130 TP"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika FastFix 130 TP</h5>
-                            <p class="card-text text-muted small">Sika FastFix®-130 TP es un mortero cementoso,
-                                predosificado, monocomponente, para fijaciones y reparaciones.</p>
-                            <p class="card-text text-muted small">Especificaciones para Productos de Relleno y Anclaje Cementoso :
-                                <li style="margin-left: 20px;">Gris, Saco de 25 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Mortero cementoso predosificado monocomponente para fijaciones y reparaciones.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Gris</span>
+                                <span class="spec-badge">Saco 25 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaLam SP 8 Plus -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="" class="card-img-top" alt="SikaLam SP-8 Plus">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="" alt="SikaLam SP 8 Plus"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaLam SP 8 Plus</h5>
-                            <p class="card-text text-muted small">SikaLam SP-8 Plus es una lámina de nódulos de
-                                polietileno para protección de cimientos.</p>
-                            <p class="card-text text-muted small">Especificaciones para Láminas de Protección y drenaje:
-                                <li style="margin-left: 20px;">Marrón, 12 Rollos o por separado</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Lámina de nódulos de polietileno para protección de cimientos.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Marrón</span>
+                                <span class="spec-badge">12 rollos o unidad</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika Reemat Premium -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-Sika-AnchorFix-1-300-02818835:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="Sika Reemat Premium">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-Sika-AnchorFix-1-300-02818835:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="Sika Reemat Premium"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika Reemat Premium</h5>
-                            <p class="card-text text-muted small">Sika® Reemat Premium es un tejido de fibra de vidrio
-                                para refuerzo para el sistema de Membranas de Aplicación Líquida.</p>
-                            <p class="card-text text-muted small">Especificaciones para Mallas de Refuerzo:
-                                <li style="margin-left: 20px;">Blanco, 8 Rollos o por separado</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Tejido de fibra de vidrio para refuerzo en sistemas de membranas de aplicación líquida.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Blanco</span>
+                                <span class="spec-badge">8 rollos o unidad</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika AnchorFix 1 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-Sika-AnchorFix-1-300-02818835:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="Sika AnchoFix-1">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Sika AnchoFix 1</h5>
-                            <p class="card-text text-muted small">Sika AnchorFix®-1 es un adhesivo de curado rápido para
-                                anclajes a base de resina de poliéster libre de estireno y disolventes.</p>
-                            <p class="card-text text-muted small">Especificaciones para Productos de Relleno y Anclaje a Base de Resinas:
-                                <li style="margin-left: 20px;">Gris Claro, Cartuchos</li>
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-Sika-AnchorFix-1-300-02818835:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="Sika AnchorFix 1"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sika AnchorFix 1</h5>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Adhesivo de curado rápido para anclajes a base de resina de poliéster, libre de estireno y disolventes.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Gris claro</span>
+                                <span class="spec-badge">Cartuchos</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika AnchorFix 2+ -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-Sika-AnchorFix-2-550-02818976:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="Sika AnchoFix-2+">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Sika AnchoFix 2+</h5>
-                            <p class="card-text text-muted small">Sika AnchorFix®-2+ es un adhesivo de anclajes para
-                                cargas medias - altas, a base de resina de epoxi-acrilato, libre de estireno y
-                                disolventes.</p>
-                            <p class="card-text text-muted small">Especificaciones para Productos de Relleno y Anclaje a Base de Resinas:
-                                <li style="margin-left: 20px;">Gris, Cartuchos</li>
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-Sika-AnchorFix-2-550-02818976:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="Sika AnchorFix 2+"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sika AnchorFix 2+</h5>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Adhesivo de anclajes para cargas medias-altas, a base de resina epoxi-acrilato, libre de estireno.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Gris</span>
+                                <span class="spec-badge">Cartuchos</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaBond T8 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-sikabond-t8-01939119:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="SikaBond-T8">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-sikabond-t8-01939119:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="SikaBond T8"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaBond T8</h5>
-                            <p class="card-text text-muted small">SikaBond® T-8 es un adhesivo elástico e impermeable
-                                para pegado de baldosas. Adhesivo elástico y monocomponente.</p>
-                            <p class="card-text text-muted small">Especificaciones para Productos para Pegados de Pavimentos:
-                                <li style="margin-left: 20px;">Ocre, Bote de 10 l</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Adhesivo elástico e impermeable monocomponente para pegado de baldosas.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Ocre</span>
+                                <span class="spec-badge">Bote 10 l</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaCeram Sealing Membrane A -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-SikaCeram-Membrane-A-05380975:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="SikaCeram Sealing Membrane A">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-SikaCeram-Membrane-A-05380975:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="SikaCeram Sealing Membrane A"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaCeram Sealing Membrane A</h5>
-                            <p class="card-text text-muted small">Membrana flexible para sellado y desolidarización para
-                                impermeabilizar paredes y suelos bajo baldosas en cuartos húmedos, piscinas y balcones.
+                            <p class="card-desc">
+                                <span class="card-desc-short">Membrana flexible para sellado e impermeabilización bajo baldosas en zonas húmedas y balcones.</span>
                             </p>
-                            <p class="card-text text-muted small">Especificaciones para Impermeabilización Bajo Cerámica:
-                                <li style="margin-left: 20px;">Incoloro, Caja de 12 Bolsas o Bolsas por separado</li>
-                            </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Incoloro</span>
+                                <span class="spec-badge">Caja 12 bolsas</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaCim Anticongelante -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="" class="card-img-top" alt="SikaCim Anticongelante">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="" alt="SikaCim Anticongelante"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaCim Anticongelante</h5>
-                            <p class="card-text text-muted small">Aditivo líquido, libre de cloruros, especialmente
-                                formulado para la fabricación de mortero y hormigón en bajas temperaturas.</p>
-                            <p class="card-text text-muted small">Especificaciones para Acelerantes y Retardantes:
-                                <li style="margin-left: 20px;">Incoloro, Caja de 12 Bolsas o Bolsas por separado</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Aditivo líquido libre de cloruros para mortero y hormigón en bajas temperaturas.</span>
                             </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaCim Fibras 6mm -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-13600160-0100-00785463:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="SikaCim Fibras 6mm">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-13600160-0100-00785463:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="SikaCim Fibras 6mm"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaCim Fibras 6mm</h5>
-                            <p class="card-text text-muted small">SikaCim® Fibras es una fibra monofilamento de
-                                polipropileno de 6 mm de longitud para uso en hormigones y morteros.</p>
-                            <p class="card-text text-muted small">Especificaciones para Fibras:
-                                <li style="margin-left: 20px;">Blanco, Caja de 100 Bolsas o Bolsas por separado</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Fibra monofilamento de polipropileno de 6 mm para hormigones y morteros.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Blanco</span>
+                                <span class="spec-badge">Caja 100 bolsas</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaCim Impermeabilizante -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-11626573-0100-00255865:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="SikaCim Impermeabilizante">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-11626573-0100-00255865:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="SikaCim Impermeabilizante"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaCim Impermeabilizante</h5>
-                            <p class="card-text text-muted small">Aditivo líquido libre de cloruros utilizado para la
-                                fabricación de morteros y hormigones impermeables.</p>
-                            <p class="card-text text-muted small">Especificaciones para Impermeabilizantes:
-                                <li style="margin-left: 20px;">Amarillo, Garrafa de 5 kg</li>
-                                <li style="margin-left: 20px;">Amarillo, Garrafa de 25 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Aditivo líquido libre de cloruros para morteros y hormigones impermeables.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Amarillo</span>
+                                <span class="spec-badge">Garrafa 5 kg</span>
+                                <span class="spec-badge">Garrafa 25 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaDur 31+ -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-sikadur-31--02651650:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="SikaDur -31+">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-sikadur-31--02651650:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="SikaDur 31+"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaDur 31+</h5>
-                            <p class="card-text text-muted small">Adhesivo estructural de 2 componentes, de bajas
-                                emisiones, en base epoxi, tolerante a la humedad, con elevada resistencia mecánica.</p>
-                            <p class="card-text text-muted small">Especificaciones para Adhesivos y Morteros de Resinas Epoxi:
-                                <li style="margin-left: 20px;">Gris, Lote de 1.2 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Adhesivo estructural bicomponente epoxi, tolerante a la humedad, con alta resistencia mecánica.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Gris</span>
+                                <span class="spec-badge">Lote 1,2 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaDur 32+ -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-sikadur32-06291336:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top" alt="SikaDur -32+">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-sikadur32-06291336:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="SikaDur 32+"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaDur 32+</h5>
-                            <p class="card-text text-muted small">Adhesivo estructural bicomponente, tolerante a la
-                                humedad, basado en resinas epoxi y áridos especiales.</p>
-                            <p class="card-text text-muted small">Especificaciones para Adhesivos y Morteros de Resinas Epoxi:
-                                <li style="margin-left: 20px;">Amarillo, Lote de 1 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Adhesivo estructural bicomponente, tolerante a la humedad, en base resinas epoxi y áridos.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Amarillo</span>
+                                <span class="spec-badge">Lote 1 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaDur 42+ LE Warm Climate -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="https://sika.scene7.com/is/image/sikacs/es-glo-Sikadur-42---LE-(ABC)-20-kg--05292403:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" class="card-img-top"
-                            alt="SikaDur -42+ LE Warm Climate">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="https://sika.scene7.com/is/image/sikacs/es-glo-Sikadur-42---LE-(ABC)-20-kg--05292403:1-1?wid=480&hei=480&fit=crop%2C1&fmt=webp-alpha" alt="SikaDur 42+ LE Warm Climate"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaDur 42+ LE Warm Climate</h5>
-                            <p class="card-text text-muted small">Grout de 3 componentes de elevadas prestaciones,
-                                tolerante a la humedad, para aplicaciones estáticas o dinámicas en espesores de 25 a 300
-                                mm.</p>
-                            <p class="card-text text-muted small">Especificaciones para Productos de Relleno y Anclaje a Base de Resinas:
-                                <li style="margin-left: 20px;">Gris</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Grout de 3 componentes de elevadas prestaciones para aplicaciones estáticas o dinámicas.</span>
+                                <span class="card-desc-extra">Tolerante a la humedad. Espesores de 25 a 300 mm.</span>
                             </p>
+                            <div class="specs-wrap card-desc-extra">
+                                <span class="spec-badge">Gris</span>
+                            </div>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaDur 501 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="" class="card-img-top" alt="SikaDur 501">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="" alt="SikaDur 501"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaDur 501</h5>
-                            <p class="card-text text-muted small">Arena de espolvorear para mejorar la adherencia de
-                                capas de acabado fino en morteros autonivelantes.</p>
-                            <p class="card-text text-muted small">Especificaciones:
-                                <li style="margin-left: 20px;">Saco de 20 kg</li>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Arena de espolvorear para mejorar la adherencia de capas de acabado en morteros autonivelantes.</span>
                             </p>
+                            <div class="specs-wrap">
+                                <span class="spec-badge">Saco 20 kg</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
+                <!-- SikaFill 370 Fibers -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikafill370fibers.webp" class="card-img-top" alt="SikaFill -370 Fibers">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikafill370fibers.webp" alt="SikaFill 370 Fibers"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaFill 370 Fibers</h5>
-                            <p class="card-text text-muted small">SikaFill®-370 Fibers es un revestimiento elástico con
-                                fibras, para impermeabilización «in situ». Revestimiento elástico de consistencia
-                                cremosa, a base de copolímeros estireno- acrílicos en emulsión acuosa, con fibras de
-                                vidrio, que una vez seco forma una película flexible, impermeable y duradera. Tecnología
-                                Duralastic. </p>
-                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-para-cubiertas/cubierta-con-disenosingular/membranas-liquidasacrilicas/sikafill-370-fibers.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Revestimiento elástico con fibras para impermeabilización in situ. Tecnología Duralastic.</span>
+                                <span class="card-desc-extra">Base de copolímeros estireno-acrílicos en emulsión acuosa con fibras de vidrio. Forma una película flexible, impermeable y duradera una vez seco.</span>
+                            </p>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-para-cubiertas/cubierta-con-disenosingular/membranas-liquidasacrilicas/sikafill-370-fibers.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaFill 420 Extreme -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikafill420extreme.webp" class="card-img-top" alt="SikaFill -420 Extreme">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikafill420extreme.webp" alt="SikaFill 420 Extreme"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaFill 420 Extreme</h5>
-                            <p class="card-text text-muted small">SikaFill®-420 Extreme es una membrana líquida
-                                impermeabilizante en base agua, de aplicación en frío, monocomponente, libre de
-                                disolventes, altamente elástica y resistente a los rayos UV. Tecnología Duralastic. </p>
-                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-para-cubiertas/productos-para-cubiertas/sikafill-400.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Membrana líquida impermeabilizante en base agua, altamente elástica y resistente a los rayos UV. Tecnología Duralastic.</span>
+                                <span class="card-desc-extra">Monocomponente, libre de disolventes, de aplicación en frío.</span>
+                            </p>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-para-cubiertas/productos-para-cubiertas/sikafill-400.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sikaflex 11 FC -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikaflex-11fc.jpg" class="card-img-top" alt="Sikaflex">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikaflex-11fc.jpg" alt="Sikaflex 11 FC"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sikaflex 11 FC</h5>
-                            <p class="card-text text-muted small">Adhesivo y sellador elástico monocomponente de curado
-                                por humedad para sellados y pegados multiusos en interior y exterior.</p>
-                            <a href="https://esp.sika.com/es/sikaflex-11fc-purform/sikaflex-11fc-purfom-construccion/sikaflex-11fc.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Adhesivo y sellador elástico monocomponente de curado por humedad para sellados y pegados multiusos.</span>
+                            </p>
+                            <a href="https://esp.sika.com/es/sikaflex-11fc-purform/sikaflex-11fc-purfom-construccion/sikaflex-11fc.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sikafloor 2100 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikafloor2100.webp" class="card-img-top" alt="Sikafloor 2100">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikafloor2100.webp" alt="Sikafloor 2100"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sikafloor 2100</h5>
-                            <p class="card-text text-muted small">Sikafloor®-2100 es un revestimiento híbrido de resina
-                                epoxi acrílico en base agua, de color, basado en tecnología co-elástica apto para ser
-                                colocado sobre soportes asfálticos y cementosos. El recubrimiento proporciona un acabado
-                                semibrillante liso y sin juntas en pavimentos deportivos, áreas de demarcación y
-                                exposición al tráfico rodado ligero. Se pueden conseguir espesores variables de 2,0-3,0
-                                mm. Puede ser utilizado en interior y exterior.</p>
-                            <a href="https://esp.sika.com/es/construccion/acabados/pavimentos/pavimentos-deportivosyexteriores/pavimentos-deportivos/sikafloor-2100.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Revestimiento híbrido epoxi acrílico en base agua para pavimentos deportivos y tráfico rodado ligero.</span>
+                                <span class="card-desc-extra">Acabado semibrillante liso, espesores de 2,0–3,0 mm. Apto en interior y exterior, sobre soportes asfálticos y cementosos.</span>
+                            </p>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://esp.sika.com/es/construccion/acabados/pavimentos/pavimentos-deportivosyexteriores/pavimentos-deportivos/sikafloor-2100.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaGard 790 All-in-One -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikagard790.webp" class="card-img-top" alt="SikaGard 790 All-in-One-Protect">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikagard790.webp" alt="SikaGard 790 All-in-One-Protect"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaGard 790 All-in-One-Protect</h5>
-                            <p class="card-text text-muted small">Basado en una fórmula avanzada, Sikagard®-790
-                                All-in-One Protect ha sido desarrollado especialmente para proporcionar una protección
-                                altamente eficaz y duradera sobre piedras naturales y superficies minerales.
-                                Sikagard®-790 All-in-One Protect es invisible y no altera el color ni la apariencia de
-                                la piedra*. Protege la piedra y los pavimentos frente a las manchas provocadas por la
-                                mayoría de los líquidos, incluidos aceite, gasolina y agua; previene los daños causados
-                                por la penetración de agua y la erosión, y además facilita la eliminación de grafitis
-                                sobre la superficie, haciendo su retirada mucho más sencilla mediante el uso de
-                                limpiadores adecuados. Es permeable al vapor, por lo que no modifica el comportamiento
-                                hidrotérmico de la estructura.</p>
-                            <a href="https://esp.sika.com/es/construccion/acabados/soluciones-para-fachadas/productos-de-proteccionylimpieza/sikagard-790-all-in-oneprotect.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Protección altamente eficaz e invisible sobre piedras naturales y superficies minerales.</span>
+                                <span class="card-desc-extra">Repele manchas de aceite, gasolina y agua. Previene daños por erosión, facilita la retirada de grafitis y es permeable al vapor.</span>
+                            </p>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://esp.sika.com/es/construccion/acabados/soluciones-para-fachadas/productos-de-proteccionylimpieza/sikagard-790-all-in-oneprotect.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaGuard 711 ES -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikaguard711es.jpg" class="card-img-top" alt="SikaGuard -711 ES">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikaguard711es.jpg" alt="SikaGuard 711 ES"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaGuard 711 ES</h5>
-                            <p class="card-text text-muted small">Impregnante hidrófugo con autoprotección para el
-                                soporte, base silano-siloxano, que protege de la aparición de agentes externos
-                                producidos por la humedad.</p>
-                            <a href="https://esp.sika.com/es/construccion/acabados/soluciones-para-fachadas/productos-de-proteccionylimpieza/sikagard-711es.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Impregnante hidrófugo con autoprotección base silano-siloxano contra la humedad.</span>
+                            </p>
+                            <a href="https://esp.sika.com/es/construccion/acabados/soluciones-para-fachadas/productos-de-proteccionylimpieza/sikagard-711es.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaLastic 1K ES -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikalastic1kes.webp" class="card-img-top" alt="SikaLastic 1K ES">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikalastic1kes.webp" alt="SikaLastic 1K ES"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaLastic 1K ES</h5>
-                            <p class="card-text text-muted small">Sikalastic®-1K ES es un mortero monocomponente,
-                                reforzado con fibras, puentea fisuras, a base de cemento modificado con polímeros
-                                especiales resistentes a los álcalis. Sikalastic®-1K ES es adecuado para aplicación con
-                                brocha o llana.</p>
-                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-de-impermeabilizacion/sikalastic-1k-es.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Mortero monocomponente reforzado con fibras que puentea fisuras, para impermeabilización.</span>
+                                <span class="card-desc-extra">Apto para aplicación con brocha o llana. Base de cemento modificado con polímeros resistentes a los álcalis.</span>
+                            </p>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-de-impermeabilizacion/sikalastic-1k-es.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaLastic 612 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikalastic612.webp" class="card-img-top" alt="SikaLastic -612">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikalastic612.webp" alt="SikaLastic 612"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaLastic 612</h5>
-                            <p class="card-text text-muted small">Sikalastic®-612 es una membrana impermeabilizante de
-                                poliuretano monocomponente, de aplicación en frío, activada por la humedad. Cura
-                                formando una solución de impermeabilización continua (sin juntas) y duradera para
-                                cubierta expuestas y elementos constructivos, así como para su aplicación bajo baldosa
-                                en balcones y terrazas.</p>
-                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-para-cubiertas/productos-para-cubiertas/sikalastic-612.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Membrana impermeabilizante de poliuretano monocomponente activada por humedad.</span>
+                                <span class="card-desc-extra">Cura formando una solución continua sin juntas. Apta para cubiertas expuestas, balcones y bajo baldosa.</span>
+                            </p>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-para-cubiertas/productos-para-cubiertas/sikalastic-612.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaLimp -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikalimp.webp" class="card-img-top" alt="SikaLimp">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikalimp.webp" alt="SikaLimp"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaLimp</h5>
-                            <p class="card-text text-muted small">Líquido limpiador a base de ácidos inorgánicos. Se
-                                recomienda tomar las medidas preceptivas a la hora de su utilización.</p>
-                            <a href="https://esp.sika.com/dms/getdocument.get/feff1ae3-bb5a-39a6-ac6e-f419469aa78f/Sikalimp.pdf"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Líquido limpiador a base de ácidos inorgánicos.</span>
+                            </p>
+                            <a href="https://esp.sika.com/dms/getdocument.get/feff1ae3-bb5a-39a6-ac6e-f419469aa78f/Sikalimp.pdf" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika MonoTop 107 Plus ES -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikamonotop-107pluses.webp" class="card-img-top" alt="Sika MonoTop 107 Plus ES">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikamonotop-107pluses.webp" alt="Sika MonoTop 107 Plus ES"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika MonoTop 107 Plus ES</h5>
-                            <p class="card-text text-muted small">Mortero impermeabilizante monocomponente de altas
-                                prestaciones y más sostenible, a base de cemento con áridos seleccionados y material
-                                reciclado.</p>
-                            <a href="https://esp.sika.com/es/sostenibilidad/sustainability-performance-management/sika-monotop.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Mortero impermeabilizante monocomponente de altas prestaciones con material reciclado.</span>
+                            </p>
+                            <a href="https://esp.sika.com/es/sostenibilidad/sustainability-performance-management/sika-monotop.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika MonoTop 160 Migrating -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikamonotop160migrating.webp" class="card-img-top" alt="Sika MonoTop 160 Migrating">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikamonotop160migrating.webp" alt="Sika MonoTop 160 Migrating"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika MonoTop 160 Migrating</h5>
-                            <p class="card-text text-muted small">Sika MonoTop®-160 Migrating es un mortero cementoso de
-                                impermeabilización, monocomponente, compuesto de áridos seleccionados y agentes químicos
-                                activos. Los componentes activos migran dentro de la red de poros y capilares del
-                                hormigón, que reaccionan con la humedad y la cal libre presente generando una estructura
-                                cristalina insoluble dentro de la red. La lechada puede aplicarse mediante brocha o por
-                                proyección y proporciona una capa impermeable para evitar la penetración del agua en
-                                todo tipo de estructuras de hormigón. </p>
-                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-de-impermeabilizacion/sika-monotop-160migrating.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Mortero cementoso impermeabilizante con agentes activos que migran al interior del hormigón.</span>
+                                <span class="card-desc-extra">Los componentes generan una estructura cristalina insoluble en la red de poros. Aplicable con brocha o por proyección.</span>
+                            </p>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://esp.sika.com/es/construccion/proteger/sistemas-de-impermeabilizacion/sika-monotop-160migrating.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika MonoTop 612 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikamonotop612.webp" class="card-img-top" alt="Sika MonoTop 612">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikamonotop612.webp" alt="Sika MonoTop 612"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika MonoTop 612</h5>
-                            <p class="card-text text-muted small">Sika MonoTop® 612 es un mortero de reparación
-                                estructural de un componente reforzado con fibras y humo de sílice que cumple con los
-                                requerimientos de la clase R3 de la UNE-EN 1504-3.</p>
-                            <a href="https://esp.sika.com/es/construccion/reparar/hormigon/reparacion-con-morteros/sika-monotop-612.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Mortero de reparación estructural monocomponente con fibras y humo de sílice, clase R3.</span>
+                            </p>
+                            <a href="https://esp.sika.com/es/construccion/reparar/hormigon/reparacion-con-morteros/sika-monotop-612.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Sika MonoTop 4012 ES -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikamonotop4012.webp" class="card-img-top" alt="Sika MonoTop 4012 ES">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikamonotop4012.webp" alt="Sika MonoTop 4012 ES"></div>
+                        <div class="card-body">
                             <h5 class="card-title">Sika MonoTop 4012 ES</h5>
-                            <p class="card-text text-muted small">Sika MonoTop®-4012 ES es un mortero de reparación
-                                monocomponente, reforzado con fibras y de baja retracción. Contiene materiales
-                                reciclados en su composición y ayuda a reducir los valores de obtención de huella de
-                                carbono.</p>
-                            <a href="https://esp.sika.com/es/construccion/reparar/hormigon/reparacion-con-morteros/sika-monotop-4012es.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Mortero de reparación monocomponente reforzado con fibras, baja retracción y materiales reciclados.</span>
+                            </p>
+                            <a href="https://esp.sika.com/es/construccion/reparar/hormigon/reparacion-con-morteros/sika-monotop-4012es.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaMur InjectoCream 100 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikamurinjectocream-100.webp" class="card-img-top" alt="sikamurinjectocream-100">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikamurinjectocream-100.webp" alt="SikaMur InjectoCream 100"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaMur InjectoCream 100</h5>
-                            <p class="card-text text-muted small">Sustancia repelente al agua para el control de
-                                humedades por capilaridad, que forma una barrera repelente bloqueando la humedad
-                                ascendente.</p>
-                            <a href="https://esp.sika.com/es/construccion/reparar/grietas/sikamur-injectocream-100.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Sustancia repelente al agua que forma una barrera contra la humedad ascendente por capilaridad.</span>
+                            </p>
+                            <a href="https://esp.sika.com/es/construccion/reparar/grietas/sikamur-injectocream-100.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaPlast 200 R -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikaplast200r.webp" class="card-img-top" alt="SikaPlast -200 R">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikaplast200r.webp" alt="SikaPlast 200 R"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaPlast 200 R</h5>
-                            <p class="card-text text-muted small">Superplastificante que permite obtener y mantener
-                                hormigones fluidos, incluso en tiempo caluroso. Exento de cloruros.</p>
-                            <a href="https://esp.sika.com/es/construccion/construir/Aditivos-hormigon-mortero/sikaplast-200-r.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Superplastificante para obtener y mantener hormigones fluidos incluso en tiempo caluroso. Exento de cloruros.</span>
+                            </p>
+                            <a href="https://esp.sika.com/es/construccion/construir/Aditivos-hormigon-mortero/sikaplast-200-r.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaTop 10 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikatop10.webp" class="card-img-top" alt="SikaTop 10">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikatop10.webp" alt="SikaTop 10"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaTop 10</h5>
-                            <p class="card-text text-muted small">SikaTop®-10 es una resina sintética a base de
-                                copolímeros estireno acrílicos, con cargas minerales, que se utiliza como imprimación
-                                tapaporos y promotor de adherencia sobre soportes de naturaleza mineral, revestimientos
-                                cementosos y revestimientos cerámicos antiguos.</p>
-                            <a href="https://esp.sika.com/es/construccion/acabados/microcemento/sikatop-10.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Resina sintética de copolímeros acrílicos como imprimación tapaporos y promotor de adherencia.</span>
+                                <span class="card-desc-extra">Para soportes minerales, revestimientos cementosos y cerámicos antiguos.</span>
+                            </p>
+                            <button class="btn-ver-mas" onclick="toggleExtra(this)">Ver más <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://esp.sika.com/es/construccion/acabados/microcemento/sikatop-10.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaTop 30 -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikatop30.webp" class="card-img-top" alt="SikaTop 30">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikatop30.webp" alt="SikaTop 30"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaTop 30</h5>
-                            <p class="card-text text-muted small">SikaTop®-30 es una resina de unión para morteros y
-                                yesos. Resina acrílica en base agua, para mejorar la adherencia previa a la aplicación
-                                de todo tipo de morteros cementosos.</p>
-                            <a href="http://esp.sika.com/es/construccion/construir/Aditivos-hormigon-mortero/sikatop-30.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Resina acrílica en base agua para mejorar la adherencia previa a todo tipo de morteros cementosos.</span>
+                            </p>
+                            <a href="http://esp.sika.com/es/construccion/construir/Aditivos-hormigon-mortero/sikatop-30.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- SikaTop 107 Plus ES -->
                 <div class="col">
-                    <div class="card card-producto">
-                        <img src="sikatop107pluses.webp" class="card-img-top" alt="SikaTop 107 Plus ES">
-                        <div class="card-body d-flex flex-column">
+                    <div class="card-producto">
+                        <div class="img-wrap"><img src="sikatop107pluses.webp" alt="SikaTop 107 Plus ES"></div>
+                        <div class="card-body">
                             <h5 class="card-title">SikaTop 107 Plus ES</h5>
-                            <p class="card-text text-muted small">SikaTop®-107 Plus ES es un mortero de
-                                impermeabilización de dos componentes a base de cemento portland, áridos seleccionados,
-                                material reciclado y aditivos.</p>
-                            <a href="https://esp.sika.com/es/construccion/proteger/soluciones-impermeabilizacion/morteros-impermeables/sikatop-107-pluses.html"
-                                class="btn btn-producto btn-sm mt-auto"><i class="fa-solid fa-eye me-1"></i>Ver
-                                Ficha</a>
+                            <p class="card-desc">
+                                <span class="card-desc-short">Mortero de impermeabilización bicomponente a base de cemento portland con material reciclado.</span>
+                            </p>
+                            <a href="https://esp.sika.com/es/construccion/proteger/soluciones-impermeabilizacion/morteros-impermeables/sikatop-107-pluses.html" class="btn-ficha" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ficha técnica
+                            </a>
                         </div>
                     </div>
                 </div>
 
             </div>
 
+            <!-- AVISO MÁS ARTÍCULOS -->
             <div class="aviso-mas-articulos">
                 <div class="aviso-icono">
                     <i class="fa-solid fa-boxes-stacking"></i>
                 </div>
                 <div>
                     <h4><i class="fa-solid fa-circle-info me-2"></i>¿No encuentras lo que buscas?</h4>
-                    <p>Este catálogo muestra una selección de nuestros productos Sika más habituales en tienda, pero
-                        disponemos de <strong>muchos más artículos</strong> en catálogo que te podemos pedir
-                        directamente. Consúltanos sin compromiso y te asesoramos sobre el producto más adecuado para tu
-                        proyecto.</p>
+                    <p>Este catálogo muestra una selección de nuestros productos Sika más habituales en tienda, pero disponemos de <strong>muchos más artículos</strong> que podemos pedir directamente. Consúltanos sin compromiso.</p>
                     <p class="mt-2">
                         <i class="fa-solid fa-phone me-1"></i> <strong>925 23 34 54</strong> &nbsp;|&nbsp;
-                        <i class="fa-solid fa-envelope me-1"></i> <a
-                            href="mailto:almacen@olivillatres.com">almacen@olivillatres.com</a>
+                        <i class="fa-solid fa-envelope me-1"></i>
+                        <a href="mailto:almacen@olivillatres.com">almacen@olivillatres.com</a>
                     </p>
                 </div>
             </div>
-
         </section>
 
-    </div>
+    </main>
 
-    <footer class="Contacto">
-        <p><strong>Calle Rio Valdecelada, 7</strong></p>
-        <p>45007 - Toledo</p>
-        <p>Tlfo: 925 23 34 54</p>
-        <p>Email: <a href="mailto:almacen@olivillatres.com">almacen@olivillatres.com</a></p>
-        <div class="grupo-2">
-            <small>
-                &copy;2026 <b>Olivilla Tres S.L.U</b> - Todos los Derechos Reservados
-            </small>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-main">
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <div class="col-lg-4 col-md-6 footer-brand">
+                    <img src="logonuevo2.png" alt="Olivilla Tres" style="height:55px; filter:brightness(0) invert(1); opacity:0.85; margin-bottom:10px;">
+                    <p>Suministro de materiales de construcción, aislamiento e impermeabilización en Toledo. Asesoramiento técnico especializado.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="footer-heading">Navegación</p>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./ferreteria.html">Ferretería</a></li>
+                        <li><a href="./poliymeta.html">Policarbonatos</a></li>
+                        <li><a href="./index.html#proveedores">Todos los proveedores</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <p class="footer-heading">Proveedores</p>
+                    <ul class="footer-links">
+                        <li><a href="./sika.html">Sika</a></li>
+                        <li><a href="./bostik.html">Bostik</a></li>
+                        <li><a href="./grupopuma.html">Grupo Puma</a></li>
+                        <li><a href="./ursa.html">Ursa</a></li>
+                        <li><a href="./regarsa.html">Regarsa</a></li>
+                        <li><a href="./soprema.html">Soprema</a></li>
+                        <li><a href="./pladur.html">Pladur</a></li>
+                        <li><a href="./suimco.html">Suimco</a></li>
+                        <li><a href="./tripomat.html">Tripomant</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <p class="footer-heading">Contacto</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Calle Rio Valdecelada, 7<br>45007 — Toledo</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:925233454">925 23 34 54</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:almacen@olivillatres.com">almacen@olivillatres.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 <strong>Olivilla Tres S.L.U</strong> — Todos los derechos reservados</p>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function toggleExtra(btn) {
+            const card = btn.closest('.card-body');
+            const extras = card.querySelectorAll('.card-desc-extra');
+            const abierto = btn.classList.contains('abierto');
+            extras.forEach(el => el.classList.toggle('visible', !abierto));
+            btn.classList.toggle('abierto', !abierto);
+            btn.innerHTML = abierto
+                ? 'Ver más <i class="fa-solid fa-chevron-down"></i>'
+                : 'Ver menos <i class="fa-solid fa-chevron-down"></i>';
+        }
+    </script>
 
     <script type="text/javascript">
         (function (d, t) {
@@ -1354,14 +1449,14 @@
                 window.voiceflow.chat.load({
                     verify: { projectID: '6a26a29ec4acdd8a282fd8bf' },
                     url: 'https://general-runtime.voiceflow.com',
-                    voice: {
-                        url: "https://runtime-api.voiceflow.com"
-                    }
+                    voice: { url: "https://runtime-api.voiceflow.com" }
                 });
             }
-            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+            v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
         })(document, 'script');
     </script>
-</body>
 
+</body>
 </html>
