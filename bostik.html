@@ -30,14 +30,14 @@
             flex-direction: column;
         }
 
-        /* ========== TOPBAR ========== */
+                /* ========== TOPBAR ========== */
         .topbar {
             background-color: #35284f;
-            padding: 6px 30px;
+            padding: 7px 30px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: 24px;
+            gap: 20px;
         }
 
         .topbar a,
@@ -61,13 +61,12 @@
             background-color: #5a4878;
         }
 
-        /* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
-        /* ========== NAVBAR OPCIÓN 1: Blanca con acento inferior ========== */
+        /* ========== NAVBAR ========== */
         .navbar-custom {
             background-color: #4a3b68 !important;
             border-bottom: 3px solid #b53987;
             padding: 0 20px;
-            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         }
 
         .navbar-custom .navbar-brand {
@@ -77,59 +76,60 @@
             gap: 12px;
         }
 
-        /* Logo pequeño en móvil, más grande en escritorio */
         .logo-empresa {
-            height: 44px;
+            height: 70px;
             width: auto;
-            transition: height 0.2s;
-        }
-
-        .nav-link.active {
-            color: #ffffff !important;
-            border-bottom-color: #b53987;
-        }
-
-        .navbar-custom .nav-link.active {
-            color: #b53987 !important;
-        }
-
-
-        @media (min-width: 992px) {
-            .logo-empresa {
-                height: 64px;
-            }
         }
 
         .logo-subtitulo {
-            font-size: 12px;
-            color: #b53987;
+            font-size: 14px;
+            color: #e8b0d0;
             font-weight: 500;
-            border-left: 1px solid #ddd;
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
             padding-left: 12px;
             letter-spacing: 0.3px;
             white-space: nowrap;
         }
 
         .navbar-custom .nav-link {
-            color: #ffffff !important;
+            color: rgba(255, 255, 255, 0.85) !important;
             font-weight: 400;
             font-size: 14px;
-            /* En móvil: padding normal sin el truco del borde inferior */
-            padding: 12px 16px !important;
+            padding: 12px 14px !important;
             transition: color 0.2s;
             white-space: nowrap;
         }
 
-        /* ========== DROPDOWN MENU ========== */
+        @media (min-width: 992px) {
+            .navbar-custom .nav-link {
+                padding: 22px 14px !important;
+                border-bottom: 3px solid transparent;
+                margin-bottom: -3px;
+                transition: color 0.2s, border-color 0.2s;
+            }
+        }
+
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link:focus {
+            color: #f386cc !important;
+            border-bottom-color: #b53987;
+        }
+
+        .navbar-custom .nav-link.active {
+            color: #f386cc !important;
+            border-bottom-color: #b53987;
+        }
+
+        /* ========== DROPDOWN ========== */
         .navbar-custom .dropdown-menu {
             background-color: #ffffff;
             border: none;
             border-top: 3px solid #b53987;
             border-radius: 0 0 10px 10px;
             box-shadow: 0 12px 32px rgba(74, 59, 104, 0.18);
-            padding: 10px 0;
-            min-width: 240px;
-            animation: dropFade 0.18s ease;
+            padding: 8px 0;
+            min-width: 220px;
+            animation: dropFade 0.15s ease;
         }
 
         @keyframes dropFade {
@@ -146,58 +146,40 @@
 
         .navbar-custom .dropdown-item {
             color: #4a3b68;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 500;
-            padding: 10px 20px;
+            padding: 9px 18px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             transition: background 0.15s, color 0.15s, padding-left 0.15s;
         }
 
         .navbar-custom .dropdown-item i {
-            width: 18px;
+            width: 16px;
             text-align: center;
             color: #b53987;
-            font-size: 0.88rem;
         }
 
         .navbar-custom .dropdown-item:hover {
             background-color: #f7f0f5;
             color: #b53987;
-            padding-left: 26px;
+            padding-left: 24px;
         }
 
         .navbar-custom .dropdown-divider {
             border-color: #ede5f5;
-            margin: 6px 16px;
+            margin: 5px 14px;
         }
 
-        /* Etiqueta badge en dropdown */
         .dropdown-item .badge-new {
             background-color: #b53987;
             color: #fff;
-            font-size: 0.65rem;
+            font-size: 0.63rem;
             font-weight: 600;
             padding: 2px 7px;
             border-radius: 20px;
             margin-left: auto;
-            letter-spacing: 0.04em;
-        }
-
-        /* El subrayado inferior solo en escritorio, donde hay espacio */
-        @media (min-width: 992px) {
-            .navbar-custom .nav-link {
-                padding: 24px 16px !important;
-                border-bottom: 3px solid transparent;
-                margin-bottom: -3px;
-                transition: color 0.2s, border-color 0.2s;
-            }
-        }
-
-        .navbar-custom .nav-link:hover,
-        .navbar-custom .nav-link:focus {
-            color: #b52a7c !important;
         }
 
         .btn-nav-contacto {
@@ -207,54 +189,30 @@
             font-size: 13px !important;
             font-weight: 500 !important;
             border-bottom: none !important;
-            transition: background-color 0.2s !important;
-            /* En móvil ocupa todo el ancho */
-            padding: 10px 18px !important;
+            padding: 10px 16px !important;
             margin-top: 8px;
             display: inline-block;
+            transition: background-color 0.2s !important;
         }
 
         @media (min-width: 992px) {
             .btn-nav-contacto {
                 margin-top: 0;
-                margin-left: 8px;
-                padding: 8px 18px !important;
+                margin-left: 6px;
+                padding: 8px 16px !important;
             }
         }
 
         .btn-nav-contacto:hover {
-            background-color: #4a3b68 !important;
-            color: #ffffff !important;
-        }
-
-        .navbar-custom .dropdown-menu {
-            border-radius: 8px;
-            border: 1px solid rgba(74, 59, 104, 0.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            margin-top: 3px;
-        }
-
-        .navbar-custom .dropdown-item {
-            color: #4a3b68;
-            font-size: 14px;
-            font-weight: 400;
-        }
-
-        .navbar-custom .dropdown-item:hover {
-            background-color: #f7f9fa;
-            color: #b52a7c;
+            background-color: #922f6d !important;
         }
 
         .navbar-custom .navbar-toggler {
             border-color: #b53987 !important;
         }
 
-        .navbar-custom .navbar-toggler:focus,
-        .navbar-custom .navbar-toggler:active,
-        .navbar-custom .navbar-toggler:focus-visible {
-            outline: none !important;
+        .navbar-custom .navbar-toggler:focus {
             box-shadow: 0 0 0 0.2rem rgba(181, 57, 135, 0.4) !important;
-            border-color: #b53987 !important;
         }
 
         .navbar-custom .navbar-toggler-icon {
@@ -471,85 +429,43 @@
         <a href="mailto:almacen@olivillatres.com"><i class="fa-solid fa-envelope"></i> almacen@olivillatres.com</a>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <div class="container-fluid">
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-3 px-lg-4">
             <a class="navbar-brand" href="./index.html">
-                <img src="logonuevo2.png" class="logo-empresa" alt="Logo de Aislamientos Olivilla Tres">
+                <img src="logonuevo2.png" class="logo-empresa" alt="Logo Almacén Olivilla Tres">
                 <span class="logo-subtitulo">Almacén</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-stretch">
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.html">
+                        <a class="nav-link " href="./index.html">
                             <i class="fa-solid fa-house me-1"></i>Inicio
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="fa-solid fa-trowel-bricks"></i> Proveedores
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-trowel-bricks me-1"></i>Proveedores
                         </a>
                         <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="./sika.html">
-                                    Sika
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item active" href="./bostik.html">
-                                    Bostik
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./grupopuma.html">
-                                    Grupopuma
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./ursa.html">
-                                    Ursa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./regarsa.html">
-                                    Regarsa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./soprema.html">
-                                    Soprema
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./maydisa.html">
-                                    Maydisa
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./pladur.html">
-                                    Pladur
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./suimco.html">
-                                    Suimco
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="./tripomat.html">
-                                    Tripomant
-                                </a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            <li><a class="dropdown-item" href="./sika.html">Sika</a></li>
+                            <li><a class="dropdown-item active" href="./bostik.html">Bostik</a></li>
+                            <li><a class="dropdown-item" href="./grupopuma.html">Grupo Puma</a></li>
+                            <li><a class="dropdown-item" href="./ursa.html">Ursa</a></li>
+                            <li><a class="dropdown-item" href="./regarsa.html">Regarsa</a></li>
+                            <li><a class="dropdown-item" href="./soprema.html">Soprema</a></li>
+                            <li><a class="dropdown-item" href="./maydisa.html">Maydisa</a></li>
+                            <li><a class="dropdown-item" href="./pladur.html">Pladur</a></li>
+                            <li><a class="dropdown-item" href="./suimco.html">Suimco</a></li>
+                            <li><a class="dropdown-item" href="./tripomat.html">Tripomant</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li>
                                 <a class="dropdown-item" href="./todos.html">
                                     <i class="fa-solid fa-list"></i>
@@ -566,12 +482,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./poliymeta.html">
-                            <i class="fa-solid fa-cube me-1"></i>Policarbonatos y metacrilatos
+                            <i class="fa-solid fa-cube me-1"></i>Policarbonatos
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./alquiler.html">
-                            <i class="fa-solid fa-building me-1"></i>Alquiler de Maquinaría
+                        <a class="nav-link" href="./maquinaria.html">
+                            <i class="fa-solid fa-truck-monster me-1"></i>Alquiler de Maquinaria
                         </a>
                     </li>
                     <li class="nav-item">
